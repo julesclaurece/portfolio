@@ -1,0 +1,259 @@
+/* src/components/About/About.css */
+.about {
+  padding: 6rem 2rem;
+  background: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  color: #1f2937;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+.about-intro {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 1.5rem;
+}
+
+.intro-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Certifications */
+.about-certifications {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  border-left: 4px solid #2563eb;
+}
+
+.about-certifications h3 {
+  color: #1f2937;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.claude-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+}
+
+.about-certifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.about-certifications ul li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #374151;
+}
+
+.about-certifications ul li::before {
+  content: '▸';
+  color: #2563eb;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.certifications-badges {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.6rem;
+}
+
+.about-certifications .certifications-badges li {
+  display: flex;
+  flex: none;
+  align-items: center;
+  padding: 0.5rem 1.1rem;
+  background: rgba(217, 119, 87, 0.08);
+  border: 1px solid rgba(217, 119, 87, 0.35);
+  border-radius: 999px;
+  color: #b6552f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.about-certifications .certifications-badges li::before {
+  content: '🎓';
+  position: static;
+  color: inherit;
+  font-weight: normal;
+  margin-right: 0.5rem;
+}
+
+/* Services */
+.about-services {
+  margin: 2rem 0;
+}
+
+.about-services h3 {
+  color: #1f2937;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.services-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 10px;
+  color: #374151;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.service-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  color: #2563eb;
+}
+
+/* Experience */
+.about-experience {
+  font-style: italic;
+  color: #4b5563;
+  padding: 1rem 0;
+  border-top: 2px solid #e5e7eb;
+  border-bottom: 2px solid #e5e7eb;
+  margin: 2rem 0;
+}
+
+/* Call to Action */
+.about-cta {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1f2937;
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.about-call-to-action {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-align: center;
+  margin-top: 1.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-intro {
+    font-size: 1.2rem;
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .about-certifications {
+    padding: 1.5rem;
+  }
+
+  .certifications-badges {
+    flex-wrap: wrap;
+  }
+
+  .about-certifications .certifications-badges li {
+    flex: none;
+  }
+
+  .about-call-to-action {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-certifications ul li {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,262 @@
+/* src/components/Skills/Skills.css */
+.skills {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.8rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.skills-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Conteneur des orbites */
+.skills-orbit-container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* ===== ORBITES VISUELLES EN POINTILLÉS ===== */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 2px dashed rgba(37, 99, 235, 0.2);
+}
+
+.orbit-1 {
+  width: 220px;
+  height: 220px;
+}
+
+.orbit-2 {
+  width: 360px;
+  height: 360px;
+}
+
+.orbit-3 {
+  width: 500px;
+  height: 500px;
+}
+
+/* Centre */
+.orbit-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #2563eb;
+  animation: centerPulse 2s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes centerPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    box-shadow: 0 4px 30px rgba(37, 99, 235, 0.25);
+  }
+}
+
+/* ===== ÉLÉMENTS SUR LES ORBITES ===== */
+.skill-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  /* La position est calculée en JavaScript */
+  /* Pas de rotation ! Les éléments restent toujours droits */
+  transition: none;
+}
+
+/* Cercle contenant l'icône */
+.skill-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 2px solid var(--color);
+  transition: all 0.3s ease;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1f2937;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* ===== AU SURVOL ===== */
+.skill-item:hover .skill-circle {
+  transform: scale(1.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.1);
+}
+
+.skill-item:hover .skill-name {
+  background: var(--color);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .skills {
+    padding: 4rem 1.5rem;
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+  }
+
+  .skills-orbit-container {
+    width: 420px;
+    height: 420px;
+  }
+
+  .orbit-1 {
+    width: 160px;
+    height: 160px;
+  }
+  .orbit-2 {
+    width: 260px;
+    height: 260px;
+  }
+  .orbit-3 {
+    width: 360px;
+    height: 360px;
+  }
+
+  .skill-circle {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill-name {
+    font-size: 0.7rem;
+  }
+
+  .orbit-center {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-orbit-container {
+    width: 340px;
+    height: 340px;
+  }
+
+  .orbit-1 {
+    width: 130px;
+    height: 130px;
+  }
+  .orbit-2 {
+    width: 210px;
+    height: 210px;
+  }
+  .orbit-3 {
+    width: 290px;
+    height: 290px;
+  }
+
+  .skill-circle {
+    width: 45px;
+    height: 45px;
+    border-width: 2px;
+  }
+
+  .skill-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill-name {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .orbit-center {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
