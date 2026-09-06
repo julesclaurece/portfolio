@@ -2,7 +2,7 @@
 export const projects = [
   {
     id: 1,
-    title: "Football Analyser",
+    title: "BiBiBet",
     description: "Application d'analyse de matchs de football avec suivi des favoris et historique des rencontres.",
     image: "/projects/football-analyser_as_copy.png",
     technologies: ["Data Scraping", "React", "FAST API", "Superbase", "Gemini Flash"],
