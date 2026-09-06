@@ -66,9 +66,6 @@ function Footer() {
           <p className="footer-copyright">
             &copy; {currentYear} Mon Portfolio. Tous droits réservés.
           </p>
-          <p className="footer-credit">
-            Fait avec ❤️ et React
-          </p>
         </div>
       </div>
     </footer>
