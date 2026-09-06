@@ -2,6 +2,8 @@
 
 Portfolio personnel de développeur Full-Stack, présentant mon parcours, mes compétences et mes projets.
 
+🔗 **Site live** : [jules-claurece-dev-portofolio.vercel.app](https://jules-claurece-dev-portofolio.vercel.app/)
+
 ## Aperçu
 
 Site vitrine one-page construit avec React et Vite : présentation, compétences techniques (avec une animation d'orbites), projets réalisés et moyens de contact.
