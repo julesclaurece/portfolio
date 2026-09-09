@@ -106,7 +106,7 @@
 
 .certifications-badges {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.6rem;
 }
 
@@ -114,15 +114,20 @@
   display: flex;
   flex: none;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.5rem 0.6rem 0.5rem 1.1rem;
+  gap: 1rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.6rem 0.8rem 0.6rem 1.1rem;
   background: rgba(217, 119, 87, 0.08);
   border: 1px solid rgba(217, 119, 87, 0.35);
-  border-radius: 999px;
+  border-radius: 12px;
   color: #b6552f;
   font-size: 0.85rem;
   font-weight: 600;
-  white-space: nowrap;
+}
+
+.about-certifications .certifications-badges li span {
+  min-width: 0;
 }
 
 .about-certifications .certifications-badges li::before {
@@ -134,6 +139,7 @@
 }
 
 .verify-link {
+  flex-shrink: 0;
   padding: 0.3rem 0.8rem;
   background: #b6552f;
   color: white;
@@ -246,28 +252,6 @@
 
   .about-certifications {
     padding: 1.5rem;
-  }
-
-  .certifications-badges {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
-
-  .about-certifications .certifications-badges li {
-    flex: none;
-    width: 100%;
-    justify-content: space-between;
-    border-radius: 12px;
-    white-space: normal;
-  }
-
-  .about-certifications .certifications-badges li span {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .verify-link {
-    flex-shrink: 0;
   }
 
   .about-call-to-action {
