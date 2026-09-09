@@ -2,10 +2,12 @@
 import { useState, useEffect, useRef } from 'react'
 import './Skills.css'
 import claudeIcon from '../../assets/icons/claude.svg'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 const BASE_ORBIT_SIZE = 600 // largeur de référence utilisée pour les rayons ci-dessous (desktop)
 
 function Skills() {
+  const { t } = useLanguage()
   const [time, setTime] = useState(0)
   const [scale, setScale] = useState(1)
   const animationRef = useRef(null)
@@ -135,8 +137,8 @@ function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
-        <h2 className="skills-title">Compétences</h2>
-        <p className="skills-subtitle">Développement web</p>
+        <h2 className="skills-title">{t.skills.title}</h2>
+        <p className="skills-subtitle">{t.skills.subtitle}</p>
         
         <div className="skills-orbit-container" ref={orbitContainerRef}>
           {/* Orbites visuelles */}

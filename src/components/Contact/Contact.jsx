@@ -1,7 +1,9 @@
 // src/components/Contact/Contact.jsx
 import './Contact.css'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 function Contact() {
+  const { t } = useLanguage()
   // Remplace par tes vraies informations
   const contactInfo = {
     email: 'juleskagb229@gmail.com',
@@ -12,9 +14,9 @@ function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
-        <h2 className="contact-title">Contact</h2>
+        <h2 className="contact-title">{t.contact.title}</h2>
         <p className="contact-subtitle">
-          Une question ? Un projet ? Contactez-moi directement !
+          {t.contact.subtitle}
         </p>
 
         <div className="contact-cards">
@@ -32,8 +34,8 @@ function Contact() {
                 className="contact-logo"
               />
             </div>
-            <h3>WhatsApp</h3>
-            <p>Réponse rapide</p>
+            <h3>{t.contact.whatsapp.title}</h3>
+            <p>{t.contact.whatsapp.desc}</p>
           </a>
 
           {/* Gmail */}
@@ -48,8 +50,8 @@ function Contact() {
                 className="contact-logo"
               />
             </div>
-            <h3>Gmail</h3>
-            <p>Envoyez un email</p>
+            <h3>{t.contact.gmail.title}</h3>
+            <p>{t.contact.gmail.desc}</p>
           </a>
 
           {/* Telegram */}
@@ -66,14 +68,14 @@ function Contact() {
                 className="contact-logo"
               />
             </div>
-            <h3>Telegram</h3>
-            <p>Messagerie instantanée</p>
+            <h3>{t.contact.telegram.title}</h3>
+            <p>{t.contact.telegram.desc}</p>
           </a>
         </div>
 
         {/* Ajout de liens sociaux en bas */}
         <div className="contact-social">
-          <p className="contact-social-text">Retrouvez-moi aussi sur :</p>
+          <p className="contact-social-text">{t.contact.socialText}</p>
           <div className="social-links-bottom">
             <a href="https://github.com/julesclaurece" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/dédji-jules-claurèce-kagbahinto-571942369" target="_blank" rel="noopener noreferrer">LinkedIn</a>

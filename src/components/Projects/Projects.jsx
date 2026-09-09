@@ -1,14 +1,17 @@
 // src/components/Projects/Projects.jsx
 import './Projects.css'
 import { projects } from '../../data/projects'
+import { useLanguage } from '../../i18n/LanguageContext'
 
 function Projects() {
+  const { lang, t } = useLanguage()
+
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <h2 className="projects-title">Mes Projets</h2>
+        <h2 className="projects-title">{t.projects.title}</h2>
         <p className="projects-subtitle">
-          Découvrez quelques-unes de mes réalisations récentes
+          {t.projects.subtitle}
         </p>
         
         <div className="projects-grid">
@@ -31,7 +34,7 @@ function Projects() {
               </div>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+                <p className="project-description">{project.description[lang]}</p>
                 <div className="project-tech">
                   {project.technologies.map((tech) => (
                     <span key={tech} className="tech-tag">{tech}</span>
