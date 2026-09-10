@@ -4,8 +4,8 @@ export const projects = [
     id: 1,
     title: "BiBiBet",
     description: {
-      fr: "Application d'analyse de matchs de football avec suivi des favoris et historique des rencontres.",
-      en: "Football match analysis app with favorites tracking and match history."
+      fr: "Analyse de matchs de football pilotée par IA — croise actualité, cotes bookmaker et modèle statistique maison pour des recommandations de paris argumentées, avec suivi de performance en temps réel.",
+      en: "AI-driven football match analysis — combines news, bookmaker odds and a custom statistical model into reasoned betting picks, with live performance tracking."
     },
     image: "/projects/football-analyser_as_copy.png",
     technologies: ["Data Scraping", "React", "FAST API", "Superbase", "Gemini Flash"],
